@@ -1,5 +1,6 @@
 var MakeBlinkyDancer = function (top, left, timeBetweenSteps) {
   //var blinkyDancer = makeDancer(top, left, timeBetweenSteps);
+  debugger;
   MakeDancer.call(this, top, left, timeBetweenSteps);
   //this.step(timeBetweenSteps);
   //this.setPosition(top, left);
@@ -8,9 +9,7 @@ var MakeBlinkyDancer = function (top, left, timeBetweenSteps) {
   // so we must keep a copy of the old version of this function
 
   //var oldStep = blinkyDancer.step;
-  this.oldStep = MakeDancer.bind(timeBetweenSteps);
-  //this.oldStep = MakeDancer.bind(this, timeBetweenSteps);
-
+  this.oldStep = MakeDancer.prototype.step;
 
   //return blinkyDancer;
 };
