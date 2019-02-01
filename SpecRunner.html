@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
   <title>Mocha Spec Runner</title>
   <link rel="stylesheet" href="lib/mocha/mocha.css">
@@ -10,7 +11,7 @@
   <script>
     mocha.setup('bdd');
     window.expect = chai.expect;
-    $(function() {
+    $(function () {
       window.mochaPhantomJS ? mochaPhantomJS.run() : mocha.run();
     });
   </script>
@@ -18,7 +19,9 @@
   <script src="src/dancer.js"></script>
   <script src="src/blinkyDancer.js"></script>
 </head>
+
 <body>
-<div id="mocha"></div>
+  <div id="mocha"></div>
 </body>
+
 </html>
