@@ -33,12 +33,21 @@ $(document).ready(function () {
     window.dancers.push(dancer);
     $('body').append(dancer.$node);
   });
+
   $('.lineup').on('click', function (event) {
-    var topSpacing = 20;
+    var topSpacing = 50;
     window.dancers.forEach(element => {
-      element.top = topSpacing;
-      topSpacing = topSpacing + 20;
-      element.left = 10;
+      element.setPosition(topSpacing, 25);
+      topSpacing = topSpacing + 50;
+      element.lineup = true;
     });
   });
+
+  $('.revert').on('click', function (event) {
+    window.dancers.forEach(element => {
+      element.setPosition(element.top, element.left);
+      element.lineup = false;
+    });
+  });
+
 });

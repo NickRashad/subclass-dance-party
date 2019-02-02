@@ -7,7 +7,11 @@ MakeBlinkyDancer.prototype.constructor = MakeBlinkyDancer;
 
 MakeBlinkyDancer.prototype.step = function () {
   MakeDancer.prototype.step.call(this);
-  this.$node.toggle();
+  if(!this.lineup){
+    this.$node.toggle();
+  } else {
+    this.$node.show();
+  }
 };
 
 /*
