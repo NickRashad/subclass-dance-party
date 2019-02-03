@@ -1,5 +1,8 @@
 body, html{
   height:100%;
+  background-image: url("background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 body{
   margin: 0px;
@@ -24,4 +27,34 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.blueSquareDancer{
+  border:10px solid blue;
+    height: 20px;
+    width: 20px;
+    position:absolute;
+}
+.yellowBouncyDancer {
+    display: inline-block;
+    position:absolute;
+    height: 40px;
+    width: 40px;
+    /*border:10px solid goldenrod;*/
+    /*align-self: flex-end;*/
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    /*margin: 0 auto 0 auto;*/
+    transform-origin: bottom;
+    animation-name: bounce-7;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+@keyframes bounce-7 {
+    0%   { transform: scale(1,1)      translateY(0); }
+    10%  { transform: scale(1.1,.9)   translateY(0); }
+    30%  { transform: scale(.9,1.1)   translateY(-100px); }
+    50%  { transform: scale(1.05,.95) translateY(0); }
+    57%  { transform: scale(1,1)      translateY(-7px); }
+    64%  { transform: scale(1,1)      translateY(0); }
+    100% { transform: scale(1,1)      translateY(0); }
+
 }
