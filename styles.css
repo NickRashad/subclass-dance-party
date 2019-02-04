@@ -63,8 +63,3 @@ body, a:link, a:visited, a:active{
   -webkit-transform: rotate(20deg); /* Safari */
   transform: rotate(20deg);
 }
-
-.border-gradient {
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
-}
