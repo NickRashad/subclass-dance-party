@@ -47,6 +47,7 @@ $(document).ready(function() {
     window.dancers.forEach(element => {
       element.setPosition(element.top, element.left);
       element.lineup = false;
+      element.danceduo = false;
     });
   });
 
@@ -78,11 +79,16 @@ $(document).ready(function() {
     $(dancer2).addClass('rotate');
   });
 
+  $('.blueSquareDancer').on('mouseover', event => {
+    debugger;
+    $(event.currentTarget).addClass('.greenSquareDancer');
+  });
+
   $('span').on('mouseover', function(event) {
     //var divName = $(this).data("id");
     //$('#' + divName).fadeIn();
     //$(event.currentTarget).hide();
-    $('span').css('border', '20px solid green');
+    //$('span').css('border', '20px solid green');
   });
 
   $('.yellowBouncyDancer').on('mouseleave', function(event) {

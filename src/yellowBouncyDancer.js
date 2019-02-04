@@ -3,9 +3,8 @@ var YellowBouncyDancer = function(top, left, timeBetweenSteps) {
   this.lineup = false;
   this.danceduo = false;
   MakeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node = $(
-    '<img class="yellowBouncyDancer" src="cheese.png"></img>'
-  );
+  this.$node = $('<img class="yellowBouncyDancer" src="cheese.png"></img>');
+  this.$node.addClass('hr');
 };
 
 YellowBouncyDancer.prototype = Object.create(MakeDancer.prototype);
@@ -23,5 +22,15 @@ YellowBouncyDancer.prototype.step = function () {
       left: this.left
     };
     this.$node.css(styleSettings);
+
+    // On mouseover, grow the HR logo size
+    var self = this;
+    $('.hr').on('mouseover', function () {
+      var styleSettings = {
+        height: 200,
+        width: 200
+      };
+      self.$node.css(styleSettings);
+    });
   }
 };

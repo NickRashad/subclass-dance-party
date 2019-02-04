@@ -3,7 +3,7 @@ var BlueSquareDancer = function(top, left, timeBetweenSteps) {
   this.direction = 0;
   this.lineup = false;
   this.danceduo = false;
-  this.$node = $('<span class="blueSquareDancer mouseEnterEv"></span>');
+  this.$node = $('<span class="blueSquareDancer"></span>');
 };
 
 BlueSquareDancer.prototype = Object.create(MakeDancer.prototype);
