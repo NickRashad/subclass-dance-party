@@ -21,6 +21,11 @@ MakeDancer.prototype.setPosition = function(top, left) {
     left: left
   };
   this.$node.css(styleSettings);
+
+  var $this = this.$node;
+  $('.dancer').on('mouseover', function () {
+    $this.css('border', '10px solid orange');
+  });
 };
 
 // MakeDancer.prototype.lineUp = function (top, left) {

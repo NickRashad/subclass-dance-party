@@ -32,5 +32,13 @@ BlueSquareDancer.prototype.step = function() {
     };
 
     this.$node.css(styleSettings);
+
+    var $this = this.$node;
+    $('.blueSquareDancer').on('mouseover', function () {
+      $this.css('border-image-slice', '1');
+      $this.css('border-image-source', 'linear-gradient(to left, #743ad5, #d53a9d)');
+      //$this.addClass('.border-gradient');
+    });
+
   }
 };
